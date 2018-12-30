@@ -1,0 +1,5 @@
+RewriteEngine on
+
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule ^ https://www.squter.pl%{REQUEST_URI} [NE,L,R]
